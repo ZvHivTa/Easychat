@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="275.0" style="-fx-background-color: #2f3740;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ezchat.controller.GroupInformationController">
+   <children>
+      <ScrollPane fx:id="infoScrollPane" layoutY="50.0" prefHeight="251.0" style="-fx-background-color: #3a434e;">
+         <content>
+            <AnchorPane fx:id="viewAnchorPane" layoutX="-1.0" style="-fx-background-color: #3a434e;">
+               <children>
+                  <Label fx:id="groupname" layoutX="29.0" layoutY="28.0" prefHeight="20.0" prefWidth="152.0" text="Label" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="jidLabel" layoutX="29.0" layoutY="65.0" textFill="WHITE" wrapText="true" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#44505d" height="13.0" layoutX="-1.0" layoutY="95.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="275.0" />
+                  <VBox alignment="TOP_CENTER" layoutX="-1.0" layoutY="108.0" prefHeight="87.0" prefWidth="275.0">
+                     <children>
+                        <Label fx:id="description" graphicTextGap="10.0" lineSpacing="1.0" prefHeight="46.0" prefWidth="192.0" text="123456" textFill="WHITE" wrapText="true">
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/description.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="memberNumbers" graphicTextGap="10.0" lineSpacing="1.0" prefHeight="46.0" prefWidth="192.0" text="123456" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/members.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#44505d" height="13.0" layoutX="-1.0" layoutY="195.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="275.0" />
+                  <ListView fx:id="adminListview" layoutX="13.0" layoutY="262.0" style="-fx-background-color: transparent;" />
+                  <Label graphicTextGap="10.0" layoutX="25.0" layoutY="208.0" lineSpacing="1.0" prefHeight="64.0" prefWidth="222.0" text="Administrator" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/members.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+      <Label layoutX="21.0" layoutY="19.0" text="Group Info" textFill="#eaeaea">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="closeWindow" accessibleRole="BUTTON" fitHeight="27.0" fitWidth="30.0" layoutX="234.0" layoutY="15.0" onMouseClicked="#closeWindowAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/close%20information%20window.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

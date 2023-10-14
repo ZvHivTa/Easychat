@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="275.0" style="-fx-background-color: #3a444f;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ezchat.controller.AddFriendController">
+   <children>
+      <AnchorPane prefHeight="45.0" prefWidth="274.0" style="-fx-background-color: #2f3740;">
+         <children>
+            <Label layoutX="22.0" layoutY="13.0" text="Add Friend" textFill="#eaeaea">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="closeWindow" accessibleRole="BUTTON" fitHeight="27.0" fitWidth="30.0" layoutX="233.0" layoutY="9.0" onMouseClicked="#closeWindowAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/close%20information%20window.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="161.0" prefWidth="273.0">
+         <children>
+            <AnchorPane fx:id="resultPane" layoutX="15.0" prefHeight="71.0" prefWidth="220.0" style="-fx-background-color: #3a434e;" visible="false">
+               <children>
+                  <Circle fx:id="avatarCircle" fill="DODGERBLUE" layoutX="46.0" layoutY="39.0" radius="32.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Label fx:id="username" layoutX="91.0" layoutY="14.0" prefHeight="20.0" prefWidth="152.0" text="Label" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="jidLabel" layoutX="91.0" layoutY="47.0" text="Label" textFill="WHITE" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="93.0" layoutY="28.0" prefHeight="15.0" prefWidth="87.0" text="No result…" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="21.0" layoutY="55.0" prefHeight="23.0" prefWidth="70.0" text="Username" textFill="WHITE" />
+      <TextField fx:id="searchTxt" layoutX="18.0" layoutY="84.0" prefHeight="23.0" prefWidth="238.0" promptText="Input the username…" />
+      <Label layoutX="21.0" layoutY="128.0" text="Result" textFill="WHITE" />
+      <Hyperlink layoutX="29.0" layoutY="254.0" onMouseClicked="#addFriendAction" text="Add..." textFill="#00ff33" />
+      <Hyperlink layoutX="201.0" layoutY="254.0" onMouseClicked="#cancelAction" text="Cancel" />
+      <ImageView fitHeight="23.0" fitWidth="231.0" layoutX="236.0" layoutY="84.0" onMouseClicked="#searchAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Search.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

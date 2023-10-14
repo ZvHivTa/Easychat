@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#chatListViewCellMouseEnteredAction" onMouseExited="#chatListViewCellMouseExitedAction" prefHeight="55.0" prefWidth="169.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextFlow fx:id="newMessageNumberTextFlow" layoutX="134.0" layoutY="22.0" textAlignment="CENTER" AnchorPane.rightAnchor="12.0">
+         <children>
+            <Text fx:id="newMessageNumberTxt" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="10000" wrappingWidth="40.240234375" />
+         </children>
+      </TextFlow>
+      <ImageView fx:id="avatar" fitHeight="40.0" fitWidth="42.0" layoutX="12.0" layoutY="8.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/nicknameGif.gif" />
+         </image></ImageView>
+      <Label fx:id="username" layoutX="58.0" layoutY="10.0" prefHeight="18.0" prefWidth="80.0" text="haha" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

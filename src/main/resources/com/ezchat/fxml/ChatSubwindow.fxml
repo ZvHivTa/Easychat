@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="462.0" prefWidth="460.0" style="-fx-background-color: #242A31;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ezchat.controller.ChatSubwindowController">
+   <children>
+      <ScrollPane fx:id="sp_chatview" layoutX="1.0" layoutY="67.0" maxWidth="460.0" prefHeight="332.0" prefWidth="460.0">
+         <content>
+            <VBox fx:id="vbox_messages" layoutX="5.0" prefWidth="445.0" />
+         </content>
+      </ScrollPane>
+      <AnchorPane layoutX="1.0" layoutY="399.0" prefHeight="61.0" prefWidth="460.0">
+         <children>
+            <ImageView fx:id="attachedFile" fitHeight="27.0" fitWidth="31.0" layoutX="380.0" layoutY="20.0" onMouseClicked="#AttachFileClickedAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/attached%20file.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="send_button" layoutX="414.0" layoutY="22.0" mnemonicParsing="false" onAction="#sendMessageAction" prefHeight="26.0" prefWidth="31.0" style="-fx-background-color: #0099cc; -fx-background-radius: 10px;">
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/send.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <TextField fx:id="sendmessage_text" layoutX="14.0" layoutY="16.0" prefHeight="35.0" prefWidth="348.0" promptText="Write a message…" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-border-color: white; -fx-border-radius: 40px;" />
+         </children>
+      </AnchorPane>
+      <Label fx:id="usernameLabel" layoutX="29.0" layoutY="14.0" prefHeight="27.0" prefWidth="151.0" text="Label" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="itemInformation" accessibleRole="BUTTON" fitHeight="27.0" fitWidth="27.0" layoutX="392.0" layoutY="24.0" onMouseClicked="#itemInformationMouseClickedAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/information.png" />
+         </image></ImageView>
+      <Label fx:id="groupNameLabel" layoutX="29.0" layoutY="44.0" text="Label" textFill="#f2ff00" visible="false" />
+   </children>
+</AnchorPane>

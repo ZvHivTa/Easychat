@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ezchat.controller.FileReceiveBubbleController">
+   <children>
+      <Label fx:id="Filename" layoutX="58.0" layoutY="10.0" prefHeight="18.0" prefWidth="106.0" text="haha">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Circle fx:id="FileIconCircle" fill="DODGERBLUE" layoutX="25.0" layoutY="28.0" radius="17.0" stroke="BLACK" strokeType="INSIDE" />
+      <Text fx:id="Filesize" fill="WHITE" layoutX="58.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: black;" text="Text">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Pane fx:id="openChoicePane" layoutY="45.0" prefHeight="34.0" prefWidth="178.0" visible="false">
+         <children>
+            <Hyperlink fx:id="openFile" layoutX="32.0" layoutY="10.0" onMouseClicked="#openFileAction" text="Open" />
+            <Hyperlink fx:id="openFolder" layoutX="90.0" layoutY="9.0" onMouseClicked="#openFolderAction" text="Open Folder" />
+         </children>
+      </Pane>
+      <Pane fx:id="acceptChoicePane" layoutY="45.0" prefHeight="34.0" prefWidth="178.0">
+         <children>
+            <Hyperlink fx:id="acceptFile" layoutX="32.0" layoutY="10.0" onMouseClicked="#acceptFileAction" text="Accept" />
+            <Hyperlink fx:id="rejectFile" layoutX="104.0" layoutY="9.0" onMouseClicked="#rejectFileAction" text="Reject" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

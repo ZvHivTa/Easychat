@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.leewyatt.rxcontrols.controls.RXFillButton?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.textfield.CustomTextField?>
+
+<AnchorPane prefHeight="355.0" prefWidth="579.0" style="-fx-background-color: #242A31;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ezchat.controller.NewAccountController">
+   <children>
+      <Group layoutX="20.0" layoutY="46.0">
+         <children>
+            <CustomTextField fx:id="usernameTxt" layoutX="106.0" layoutY="46.0" onMouseClicked="#usernameTxtClickedAction" prefHeight="23.0" prefWidth="155.0" promptText="6-30 number or characters">
+               <font>
+                  <Font size="10.0" />
+               </font></CustomTextField>
+            <Label layoutX="11.0" layoutY="46.0" prefHeight="24.0" prefWidth="86.0" text="Username" textFill="#fcfcfc">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/usernameGif.gif" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label layoutX="11.0" layoutY="96.0" prefHeight="22.0" prefWidth="81.0" text="Password" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/passwordGif.gif" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <CustomTextField fx:id="passwordTxt" layoutX="106.0" layoutY="96.0" onMouseClicked="#passwordTxtClickedAction" prefHeight="23.0" prefWidth="155.0" promptText="6-30 number or characters">
+               <font>
+                  <Font size="10.0" />
+               </font></CustomTextField>
+            <Label layoutX="11.0" layoutY="196.0" text="   Email" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/emailGif.gif" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <CustomTextField fx:id="emailTxt" layoutX="106.0" layoutY="196.0" onMouseClicked="#emailTxtClickedAction" prefHeight="23.0" prefWidth="232.0" />
+            <Label layoutX="11.0" layoutY="146.0" text="Nickname" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/nicknameGif.gif" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label fx:id="WrongEmailFormatLabel" layoutX="115.0" layoutY="222.0" text="Wrong Email Format! " textFill="RED" visible="false">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/error2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <CustomTextField fx:id="nicknameTxt" layoutX="106.0" layoutY="146.0" prefHeight="23.0" prefWidth="157.0" />
+            <Label fx:id="illegalUsernameLabel" layoutX="95.0" layoutY="74.0" text="Please enter legal username " textFill="RED" visible="false">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/error2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="passwordEmptyLabel" layoutX="95.0" layoutY="124.0" text="Password can not be empty" textFill="RED" visible="false">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/error2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="illegalPasswordFormatLabel" layoutX="95.0" layoutY="124.0" text="Illegal Password Format! " textFill="RED" visible="false">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/error2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </Group>
+      <Label layoutX="115.0" layoutY="39.0" text="Create to start!" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <RXFillButton fillType="CIRCLE_TO_SIDE" hoverTextFill="#00deff" layoutX="231.0" layoutY="292.0" onAction="#AccountCreateAction" prefHeight="30.0" prefWidth="133.0" style="-fx-background-color: #00deff;" text="Submit" textFill="#1a00eb" />
+      <Hyperlink layoutX="38.0" layoutY="297.0" onAction="#BacktoSigninPageAction" text="Sign in instead" />
+      <ImageView fitHeight="207.0" fitWidth="232.0" layoutX="350.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/createAccount.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

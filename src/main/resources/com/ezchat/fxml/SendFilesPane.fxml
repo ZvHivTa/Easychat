@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="250.0" prefWidth="377.0" style="-fx-background-color: #242A31;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ezchat.controller.SendFilesController">
+   <children>
+      <Label layoutX="23.0" layoutY="22.0" prefHeight="34.0" prefWidth="129.0" text="Send as files" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <ScrollPane fx:id="FilesScollpane" layoutX="65.0" layoutY="61.0" prefHeight="128.0" prefWidth="246.0">
+         <content>
+            <ListView fx:id="FilesListView" prefHeight="126.0" prefWidth="244.0" style="-fx-background-color: transparent;" />
+         </content>
+      </ScrollPane>
+      <Hyperlink fx:id="addFiles" layoutX="33.0" layoutY="212.0" onMouseClicked="#addFilesAction" text="Add">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink fx:id="closeFilewindow" layoutX="246.0" layoutY="212.0" onMouseClicked="#CancelSendFilesAction" text="Cancel">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink fx:id="sendFiles" layoutX="315.0" layoutY="212.0" onMouseClicked="#sendFilesAction" text="Send">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Hyperlink>
+   </children>
+</AnchorPane>

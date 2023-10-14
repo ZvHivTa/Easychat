@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.leewyatt.rxcontrols.controls.RXFillButton?>
+<?import com.leewyatt.rxcontrols.controls.RXPasswordField?>
+<?import com.leewyatt.rxcontrols.controls.RXTextField?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="319.0" prefWidth="560.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ezchat.controller.LoginController">
+   <children>
+      <ImageView fitHeight="338.0" fitWidth="560.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/login.gif" />
+         </image>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" height="255.0" radius="63.25" width="0.0" />
+         </effect>
+      </ImageView>
+      <Label layoutX="153.0" layoutY="35.0" prefHeight="63.0" prefWidth="282.0" text="EAZY CHAT" textAlignment="CENTER">
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font size="49.0" />
+         </font>
+      </Label>
+      <Pane layoutX="138.0" layoutY="85.0" prefHeight="199.0" prefWidth="349.0">
+         <children>
+            <Label layoutX="103.0" layoutY="20.0" text="Login to start!">
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.9684210419654846" green="0.9648343324661255" blue="0.9648343324661255" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <RXPasswordField fx:id="passwordRXTxt" echochar="" layoutX="66.0" layoutY="93.0" onMouseClicked="#RXTxtMouseClickedAction" promptText="password…" />
+            <RXTextField fx:id="usernameRXTxt" buttonDisplayMode="HIDE" layoutX="66.0" layoutY="51.0" onMouseClicked="#RXTxtMouseClickedAction" promptText="username…" />
+            <RXFillButton fx:id="loginButton" animationTime="10.0ms" hoverTextFill="#07fa30" layoutX="81.0" layoutY="139.0" onAction="#loginAction" prefHeight="23.0" prefWidth="130.0" style="-fx-background-color: #07faf9;" text="login" textFill="#0911e4">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </RXFillButton>
+            <Hyperlink layoutX="26.0" layoutY="174.0" onMouseClicked="#forgetPasswordAction" text="Forget password?" textFill="#ddfa05">
+               <font>
+                  <Font name="MingLiU-ExtB" size="14.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink layoutX="179.0" layoutY="174.0" onMouseClicked="#createAccountAction" text="New Account…" textFill="#ddfa05">
+               <font>
+                  <Font name="MingLiU-ExtB" size="14.0" />
+               </font>
+            </Hyperlink>
+            <Label fx:id="loginErrorLabel" layoutX="247.0" layoutY="92.0" text="Wrong password!" textFill="#f20000" visible="false">
+               <graphic>
+                  <ImageView fitHeight="83.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/error.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

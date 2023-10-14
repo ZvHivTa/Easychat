@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane prefHeight="460.0" prefWidth="460.0" style="-fx-background-color: #242A31;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ezchat.controller.InitChatAnchorPaneController">
+   <children>
+      <HBox alignment="CENTER" layoutX="33.0" layoutY="212.0" prefWidth="432.0">
+         <children>
+            <TextFlow fx:id="InitChatTextFlow" textAlignment="CENTER" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
