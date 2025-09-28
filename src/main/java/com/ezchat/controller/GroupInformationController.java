@@ -1,7 +1,6 @@
 package com.ezchat.controller;
 
 import com.ezchat.EZChatApplication;
-import com.ezchat.pojo.ChatItem;
 import com.ezchat.pojo.MucItem;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -13,10 +12,8 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Circle;
 import org.jivesoftware.smackx.muc.Affiliate;
-import org.jivesoftware.smackx.muc.MUCAffiliation;
 import org.jivesoftware.smackx.muc.MultiUserChat;
 
-import java.io.IOException;
 import java.util.List;
 import java.util.Objects;
 

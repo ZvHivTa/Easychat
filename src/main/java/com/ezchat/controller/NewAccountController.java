@@ -1,6 +1,5 @@
 package com.ezchat.controller;
 
-import com.ezchat.utils.OpenfireConnectUtil;
 import com.ezchat.utils.AlertWindowUtil;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -10,8 +9,6 @@ import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import org.apache.oro.text.regex.*;
 import org.controlsfx.control.textfield.CustomTextField;
-import org.jivesoftware.smack.AbstractXMPPConnection;
-import org.jivesoftware.smack.ConnectionConfiguration;
 import org.jivesoftware.smack.SmackException;
 import org.jivesoftware.smack.XMPPException;
 import org.jivesoftware.smack.packet.StanzaError;

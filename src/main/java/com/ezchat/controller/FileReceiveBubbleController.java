@@ -2,7 +2,6 @@ package com.ezchat.controller;
 
 import com.ezchat.EZChatApplication;
 import com.ezchat.utils.FileTransferUtil;
-import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
@@ -16,7 +15,6 @@ import javafx.scene.text.Text;
 import org.jivesoftware.smack.SmackException;
 import org.jivesoftware.smack.XMPPException;
 import org.jivesoftware.smackx.filetransfer.FileTransferRequest;
-import org.jivesoftware.smackx.filetransfer.IncomingFileTransfer;
 
 import java.io.File;
 import java.io.IOException;

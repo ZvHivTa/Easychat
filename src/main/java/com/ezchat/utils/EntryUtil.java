@@ -2,10 +2,8 @@ package com.ezchat.utils;
 
 import com.ezchat.pojo.ConnectionContainer;
 import javafx.scene.image.Image;
-import org.jivesoftware.smack.roster.RosterEntry;
 import org.jivesoftware.smackx.vcardtemp.VCardManager;
 import org.jivesoftware.smackx.vcardtemp.packet.VCard;
-import org.jxmpp.jid.EntityBareJid;
 import org.jxmpp.jid.Jid;
 
 import java.io.ByteArrayInputStream;
